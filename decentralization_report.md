@@ -1,8 +1,15 @@
-|    | Owner               |         Balance |   Votes | % of Supply   | % of Votes   |
-|---:|:--------------------|----------------:|--------:|:--------------|:-------------|
-|  0 | Community           | 858499603113647 |  264049 | 8.58%         | 84.05%       |
-|  1 | Algorand Foundation | 172186645761707 |   50116 | 1.72%         | 15.95%       |
+# Algorand Decentralization Report, 2023-05-01T15:46:15.967917
 
+## Summary
+| Owner               | Balance Mean   |   Votes Mean |   Votes Count |   Votes Std |   Votes % |
+|:--------------------|:---------------|-------------:|--------------:|------------:|----------:|
+| Algorand Foundation | 15,653,331.43  |      4556    |            11 |     1472.69 |   8.39695 |
+| Community           | 7,154,163.36   |      2200.41 |           120 |     2795.34 |  91.6031  |## Distribution of Votes
+![Votes Distribution](images/votes_distribution.png)
+
+
+
+## Appendix
 | Owner               | Account                                                    |         Balance |   Votes |
 |:--------------------|:-----------------------------------------------------------|----------------:|--------:|
 | Algorand Foundation | 5WCIZNGQQT747WX3RTQIBJHOMJTQRUQBBH3PMK4YLP2X33AICJEUTL6F2E |  18084888261434 |    3541 |

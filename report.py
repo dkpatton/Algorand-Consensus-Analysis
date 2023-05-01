@@ -9,6 +9,7 @@ import datetime
 import tabulate
 import requests
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 TOTAL_SUPPLY = 10000000000000000
@@ -43,29 +44,41 @@ df["Votes"] = df["Votes"].astype(int)
 df = df.drop(df[df["Balance"] == 0].index)
 df = df.drop(df[df["Votes"] == 0].index)
 
-# Make two copies, one for the report and one for the appendix
-df_report = df.copy()
+balance_participating_in_consensus = df["Balance"].sum()
+
+# Make copies for the report
+df_report1 = df.copy()
 df_appendix = df.copy()
 
-# Generate statistics for the report
-df_report = df_report.drop("Account", axis=1)
-df_report = df_report.groupby("Owner").sum()
-df_report["Balance"] = df_report["Balance"].astype(int)
-df_report["Votes"] = df_report["Votes"].astype(int)
-df_report["% of Supply"] = df_report["Balance"] / TOTAL_SUPPLY
-df_report["% of Supply"] = df_report["% of Supply"].map(lambda x: "{:.2%}".format(x))
-df_report["% of Votes"] = df_report["Votes"] / df_report["Votes"].sum()
-df_report["% of Votes"] = df_report["% of Votes"].map(lambda x: "{:.2%}".format(x))
-df_report = df_report.reset_index()
-df_report = df_report.sort_values(by=["Balance"], ascending=False)
-df_report = df_report.reset_index(drop=True)
+# By owner, Average of Balance and Votes, Number of accounts
+df_report1["Balance"] = df_report1["Balance"] / 1000000
+# Create comma separated values for balance
+df_report1 = df_report1.groupby("Owner").agg({"Balance": ["mean"],
+                                                "Votes": ["mean", "count", "std"]})
+df_report1.columns = ["Balance Mean",
+                      "Votes Mean", "Votes Count", "Votes Std"]
+df_report1["Balance Mean"] = df_report1["Balance Mean"].map("{:,.2f}".format)
+# Add total percentage of votes column to report
+df_report1["Votes %"] = (df_report1["Votes Count"] / df_report1["Votes Count"].sum()) * 100
 
-report = df_report.to_markdown()
+# Generate histograph of votes
+df["Votes"].plot.hist(bins=100, alpha=0.5)
+plt.title("Algorand Votes Distribution")
+plt.xlabel("Votes")
+plt.ylabel("Frequency")
+plt.savefig("images/votes_distribution.png")
 
 # Max appendix column
 df_appendix = df.set_index("Owner")
 appendix = df_appendix.to_markdown()
+markdown = "# Algorand Decentralization Report, " + iso_date + "\n\n"
+markdown += "## Summary\n"
+markdown += df_report1.to_markdown()
+markdown += "## Distribution of Votes\n"
+markdown += "![Votes Distribution](images/votes_distribution.png)\n\n"
+markdown += "\n\n"
+markdown += "## Appendix\n"
+markdown += appendix
 
-markdown = report + "\n\n" + appendix
 with open("decentralization_report.md", "w") as f:
     f.write(markdown)
