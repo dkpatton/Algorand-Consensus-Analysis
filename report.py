@@ -92,5 +92,5 @@ markdown += "\n\n"
 markdown += "## Raw Table\n"
 markdown += appendix
 
-with open("decentralization_report.md", "w") as f:
+with open("README.md", "w") as f:
     f.write(markdown)
