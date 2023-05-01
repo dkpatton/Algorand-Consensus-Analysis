@@ -1,15 +1,16 @@
-# Algorand Decentralization Report, 2023-05-01T15:46:15.967917
+# Algorand Decentralization Report, 2023-05-01T15:49:01.980720
 
-## Summary
+## Summary Table
 | Owner               | Balance Mean   |   Votes Mean |   Votes Count |   Votes Std |   Votes % |
 |:--------------------|:---------------|-------------:|--------------:|------------:|----------:|
 | Algorand Foundation | 15,653,331.43  |      4556    |            11 |     1472.69 |   8.39695 |
-| Community           | 7,154,163.36   |      2200.41 |           120 |     2795.34 |  91.6031  |## Distribution of Votes
+| Community           | 7,154,163.36   |      2200.41 |           120 |     2795.34 |  91.6031  |
+## Vote Distribution
 ![Votes Distribution](images/votes_distribution.png)
 
 
 
-## Appendix
+## Raw Table
 | Owner               | Account                                                    |         Balance |   Votes |
 |:--------------------|:-----------------------------------------------------------|----------------:|--------:|
 | Algorand Foundation | 5WCIZNGQQT747WX3RTQIBJHOMJTQRUQBBH3PMK4YLP2X33AICJEUTL6F2E |  18084888261434 |    3541 |

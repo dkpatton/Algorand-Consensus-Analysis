@@ -72,12 +72,12 @@ plt.savefig("images/votes_distribution.png")
 df_appendix = df.set_index("Owner")
 appendix = df_appendix.to_markdown()
 markdown = "# Algorand Decentralization Report, " + iso_date + "\n\n"
-markdown += "## Summary\n"
+markdown += "## Summary Table\n"
 markdown += df_report1.to_markdown()
-markdown += "## Distribution of Votes\n"
+markdown += "\n## Vote Distribution\n"
 markdown += "![Votes Distribution](images/votes_distribution.png)\n\n"
 markdown += "\n\n"
-markdown += "## Appendix\n"
+markdown += "## Raw Table\n"
 markdown += appendix
 
 with open("decentralization_report.md", "w") as f:
