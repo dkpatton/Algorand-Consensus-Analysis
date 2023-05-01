@@ -27,7 +27,7 @@ cb_algo_price_url = requests.get("https://api.coinbase.com/v2/exchange-rates?cur
 # Load metadata
 with open("data/meta_data.json", "r", encoding="utf-8") as f:
     metadata = json.load(f)
-    
+
 iso_date = datetime.datetime.fromtimestamp(time.time()).isoformat()
 with open("data/all_accounts.json", "r", encoding="utf-8") as f:
     accounts = json.load(f)
@@ -70,11 +70,11 @@ df["Votes"].plot.hist(bins=100, alpha=0.5)
 plt.title("Algorand Votes Distribution")
 plt.xlabel("Votes")
 plt.ylabel("Frequency")
-plt.savefig("images/votes_distribution.png")
+no_legend = plt.savefig("images/votes_distribution.png")
 
+# For info block in report
 firstRound = metadata["first_block"]
 lastRound = metadata["last_block"]
-
 
 # Max appendix column
 df_appendix = df.set_index("Owner")
