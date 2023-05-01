@@ -1,0 +1,829 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "Context": {
+            "type": "string"
+        },
+        "Hash": {
+            "type": "string"
+        },
+        "ObjectPeriod": {
+            "type": "integer"
+        },
+        "ObjectRound": {
+            "type": "integer"
+        },
+        "ObjectStep": {
+            "type": "integer"
+        },
+        "Period": {
+            "type": "integer"
+        },
+        "Round": {
+            "type": "integer"
+        },
+        "Sender": {
+            "type": "string"
+        },
+        "Step": {
+            "type": "integer"
+        },
+        "Type": {
+            "type": "string"
+        },
+        "Weight": {
+            "type": "integer"
+        },
+        "WeightTotal": {
+            "type": "integer"
+        },
+        "file": {
+            "type": "string"
+        },
+        "function": {
+            "type": "string"
+        },
+        "level": {
+            "type": "string"
+        },
+        "line": {
+            "type": "integer"
+        },
+        "msg": {
+            "type": "string"
+        },
+        "time": {
+            "type": "string"
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "Address": {
+                    "type": "string"
+                },
+                "Hash": {
+                    "type": "string"
+                },
+                "Round": {
+                    "type": "integer"
+                },
+                "ValidatedAt": {
+                    "type": "integer"
+                },
+                "ReceivedAt": {
+                    "type": "integer"
+                },
+                "PreValidated": {
+                    "type": "boolean"
+                },
+                "PropBufLen": {
+                    "type": "integer"
+                },
+                "VoteBufLen": {
+                    "type": "integer"
+                },
+                "Period": {
+                    "type": "integer"
+                },
+                "Step": {
+                    "type": "integer"
+                },
+                "Weight": {
+                    "type": "integer"
+                },
+                "Recovered": {
+                    "type": "boolean"
+                },
+                "HostName": {
+                    "type": "string"
+                },
+                "Incoming": {
+                    "type": "boolean"
+                },
+                "InstanceName": {
+                    "type": "string"
+                },
+                "Endpoint": {
+                    "type": "string"
+                },
+                "MessageDelay": {
+                    "type": "integer"
+                },
+                "Reason": {
+                    "type": "string"
+                },
+                "TXCount": {
+                    "type": "integer"
+                },
+                "MICount": {
+                    "type": "integer"
+                },
+                "AVCount": {
+                    "type": "integer"
+                },
+                "PPCount": {
+                    "type": "integer"
+                },
+                "Metrics": {
+                    "type": "object",
+                    "properties": {
+                        "version": {
+                            "type": "string"
+                        },
+                        "version-num": {
+                            "type": "string"
+                        },
+                        "channel": {
+                            "type": "string"
+                        },
+                        "branch": {
+                            "type": "string"
+                        },
+                        "commit-hash": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "branch",
+                        "channel",
+                        "commit-hash",
+                        "version",
+                        "version-num"
+                    ]
+                },
+                "m": {
+                    "type": "object",
+                    "properties": {
+                        "algod_agreement_dropped_bundle": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_dropped_proposal": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_dropped_vote": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_handled": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_handled_bundle": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_handled_proposal": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_handled_vote": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_proposal_already_assembled": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_proposal_already_filled": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_pseudonode_tasks_dropped_proposal": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_pseudonode_tasks_dropped_vote": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_pseudonode_tasks_timeouts_ppayload": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_pseudonode_tasks_timeouts_pvote": {
+                            "type": "integer"
+                        },
+                        "algod_agreement_pseudonode_tasks_timeouts_vote": {
+                            "type": "integer"
+                        },
+                        "algod_crypto_signature_secrets_verify_total": {
+                            "type": "integer"
+                        },
+                        "algod_crypto_vrf_bytes_verify_total": {
+                            "type": "integer"
+                        },
+                        "algod_ledger_logic_cost": {
+                            "type": "integer"
+                        },
+                        "algod_ledger_logic_ok": {
+                            "type": "integer"
+                        },
+                        "algod_ledger_reward_claims_total": {
+                            "type": "integer"
+                        },
+                        "algod_ledger_round": {
+                            "type": "integer"
+                        },
+                        "algod_ledger_transactions_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_broadcast_queue_micros_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_broadcast_send_micros_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_broadcasts_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_connections_dropped_total_reason__reader_err_": {
+                            "type": "integer"
+                        },
+                        "algod_network_duplicate_filter_received_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_incoming_connections": {
+                            "type": "integer"
+                        },
+                        "algod_network_incoming_peers": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_AV": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_MI": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_MS": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_PP": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_TS": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_TX": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_VB": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_received_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_AV": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_MI": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_MS": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_NP": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_PP": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_SP": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_UE": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_queue_micros_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_message_sent_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_outgoing_connections": {
+                            "type": "integer"
+                        },
+                        "algod_network_outgoing_peers": {
+                            "type": "integer"
+                        },
+                        "algod_network_peer_max_ping_seconds": {
+                            "type": "integer"
+                        },
+                        "algod_network_peer_mean_ping_seconds": {
+                            "type": "integer"
+                        },
+                        "algod_network_peer_median_ping_seconds": {
+                            "type": "integer"
+                        },
+                        "algod_network_peer_min_ping_seconds": {
+                            "type": "integer"
+                        },
+                        "algod_network_peers": {
+                            "type": "integer"
+                        },
+                        "algod_network_prio_batches_wpp_comp_sent_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_prio_pp_compressed_size_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_prio_pp_non_compressed_size_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_AV": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_MI": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_MS": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_PP": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_TS": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_TX": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_VB": {
+                            "type": "integer"
+                        },
+                        "algod_network_received_bytes_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_rx_buffer_micros_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_rx_handle_micros_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_AV": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_MI": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_MS": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_NP": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_PP": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_SP": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_UE": {
+                            "type": "integer"
+                        },
+                        "algod_network_sent_bytes_total": {
+                            "type": "integer"
+                        },
+                        "algod_network_slow_drops_total": {
+                            "type": "integer"
+                        },
+                        "algod_ram_usage": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_group_txsync_err_or_committed": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_group_txsync_handled": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_group_txsync_remember": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_backlog_size": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_dropped_dup_raw": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_err_or_committed": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_handled": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_remember": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txgroup_full": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_groupid": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_lease": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_lease_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_not_well": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_too_large": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_txid": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_txid_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_txn_dead": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_check_err_txn_early": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_cap": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_fee": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_groupid": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_lease": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_lease_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_no_space": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_pending_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_too_large": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_txid": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_txid_eval": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_txn_dead": {
+                            "type": "integer"
+                        },
+                        "algod_transaction_messages_txpool_remember_err_txn_early": {
+                            "type": "integer"
+                        },
+                        "algod_tx_pool_count": {
+                            "type": "integer"
+                        },
+                        "algod_verify_msig_4": {
+                            "type": "integer"
+                        },
+                        "algod_verify_msig_lsig_4": {
+                            "type": "integer"
+                        },
+                        "ledger_accountsinit_count": {
+                            "type": "integer"
+                        },
+                        "ledger_accountsinit_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_accountsonlinetop_count": {
+                            "type": "integer"
+                        },
+                        "ledger_accountsonlinetop_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_getblock_count": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_getblock_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_getblockhdr_count": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_getblockhdr_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_init_count": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_init_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_sync_forget_count": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_sync_forget_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_sync_put_count": {
+                            "type": "integer"
+                        },
+                        "ledger_blockq_sync_put_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_commitround_count": {
+                            "type": "integer"
+                        },
+                        "ledger_commitround_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_initblocksdb_count": {
+                            "type": "integer"
+                        },
+                        "ledger_initblocksdb_micros": {
+                            "type": "integer"
+                        },
+                        "ledger_verifygenhash_count": {
+                            "type": "integer"
+                        },
+                        "ledger_verifygenhash_micros": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "algod_agreement_dropped_bundle",
+                        "algod_agreement_dropped_proposal",
+                        "algod_agreement_dropped_vote",
+                        "algod_agreement_handled",
+                        "algod_agreement_handled_bundle",
+                        "algod_agreement_handled_proposal",
+                        "algod_agreement_handled_vote",
+                        "algod_agreement_proposal_already_assembled",
+                        "algod_agreement_proposal_already_filled",
+                        "algod_agreement_pseudonode_tasks_dropped_proposal",
+                        "algod_agreement_pseudonode_tasks_dropped_vote",
+                        "algod_agreement_pseudonode_tasks_timeouts_ppayload",
+                        "algod_agreement_pseudonode_tasks_timeouts_pvote",
+                        "algod_agreement_pseudonode_tasks_timeouts_vote",
+                        "algod_crypto_signature_secrets_verify_total",
+                        "algod_crypto_vrf_bytes_verify_total",
+                        "algod_ledger_logic_cost",
+                        "algod_ledger_logic_ok",
+                        "algod_ledger_reward_claims_total",
+                        "algod_ledger_round",
+                        "algod_ledger_transactions_total",
+                        "algod_network_broadcast_queue_micros_total",
+                        "algod_network_broadcast_send_micros_total",
+                        "algod_network_broadcasts_total",
+                        "algod_network_connections_dropped_total_reason__reader_err_",
+                        "algod_network_duplicate_filter_received_total",
+                        "algod_network_incoming_connections",
+                        "algod_network_incoming_peers",
+                        "algod_network_message_received_AV",
+                        "algod_network_message_received_MI",
+                        "algod_network_message_received_MS",
+                        "algod_network_message_received_PP",
+                        "algod_network_message_received_TS",
+                        "algod_network_message_received_TX",
+                        "algod_network_message_received_VB",
+                        "algod_network_message_received_total",
+                        "algod_network_message_sent_AV",
+                        "algod_network_message_sent_MI",
+                        "algod_network_message_sent_MS",
+                        "algod_network_message_sent_NP",
+                        "algod_network_message_sent_PP",
+                        "algod_network_message_sent_SP",
+                        "algod_network_message_sent_UE",
+                        "algod_network_message_sent_queue_micros_total",
+                        "algod_network_message_sent_total",
+                        "algod_network_outgoing_connections",
+                        "algod_network_outgoing_peers",
+                        "algod_network_peer_max_ping_seconds",
+                        "algod_network_peer_mean_ping_seconds",
+                        "algod_network_peer_median_ping_seconds",
+                        "algod_network_peer_min_ping_seconds",
+                        "algod_network_peers",
+                        "algod_network_prio_batches_wpp_comp_sent_total",
+                        "algod_network_prio_pp_compressed_size_total",
+                        "algod_network_prio_pp_non_compressed_size_total",
+                        "algod_network_received_bytes_AV",
+                        "algod_network_received_bytes_MI",
+                        "algod_network_received_bytes_MS",
+                        "algod_network_received_bytes_PP",
+                        "algod_network_received_bytes_TS",
+                        "algod_network_received_bytes_TX",
+                        "algod_network_received_bytes_VB",
+                        "algod_network_received_bytes_total",
+                        "algod_network_rx_buffer_micros_total",
+                        "algod_network_rx_handle_micros_total",
+                        "algod_network_sent_bytes_AV",
+                        "algod_network_sent_bytes_MI",
+                        "algod_network_sent_bytes_MS",
+                        "algod_network_sent_bytes_NP",
+                        "algod_network_sent_bytes_PP",
+                        "algod_network_sent_bytes_SP",
+                        "algod_network_sent_bytes_UE",
+                        "algod_network_sent_bytes_total",
+                        "algod_network_slow_drops_total",
+                        "algod_ram_usage",
+                        "algod_transaction_group_txsync_err_or_committed",
+                        "algod_transaction_group_txsync_handled",
+                        "algod_transaction_group_txsync_remember",
+                        "algod_transaction_messages_backlog_size",
+                        "algod_transaction_messages_dropped_dup_raw",
+                        "algod_transaction_messages_err_or_committed",
+                        "algod_transaction_messages_handled",
+                        "algod_transaction_messages_remember",
+                        "algod_transaction_messages_txgroup_full",
+                        "algod_transaction_messages_txpool_check_err_eval",
+                        "algod_transaction_messages_txpool_check_err_groupid",
+                        "algod_transaction_messages_txpool_check_err_lease",
+                        "algod_transaction_messages_txpool_check_err_lease_eval",
+                        "algod_transaction_messages_txpool_check_err_not_well",
+                        "algod_transaction_messages_txpool_check_err_too_large",
+                        "algod_transaction_messages_txpool_check_err_txid",
+                        "algod_transaction_messages_txpool_check_err_txid_eval",
+                        "algod_transaction_messages_txpool_check_err_txn_dead",
+                        "algod_transaction_messages_txpool_check_err_txn_early",
+                        "algod_transaction_messages_txpool_remember_err_cap",
+                        "algod_transaction_messages_txpool_remember_err_eval",
+                        "algod_transaction_messages_txpool_remember_err_fee",
+                        "algod_transaction_messages_txpool_remember_err_groupid",
+                        "algod_transaction_messages_txpool_remember_err_lease",
+                        "algod_transaction_messages_txpool_remember_err_lease_eval",
+                        "algod_transaction_messages_txpool_remember_err_no_space",
+                        "algod_transaction_messages_txpool_remember_err_pending_eval",
+                        "algod_transaction_messages_txpool_remember_err_too_large",
+                        "algod_transaction_messages_txpool_remember_err_txid",
+                        "algod_transaction_messages_txpool_remember_err_txid_eval",
+                        "algod_transaction_messages_txpool_remember_err_txn_dead",
+                        "algod_transaction_messages_txpool_remember_err_txn_early",
+                        "algod_tx_pool_count",
+                        "algod_verify_msig_4",
+                        "algod_verify_msig_lsig_4",
+                        "ledger_accountsinit_count",
+                        "ledger_accountsinit_micros",
+                        "ledger_accountsonlinetop_count",
+                        "ledger_accountsonlinetop_micros",
+                        "ledger_blockq_getblock_count",
+                        "ledger_blockq_getblock_micros",
+                        "ledger_blockq_getblockhdr_count",
+                        "ledger_blockq_getblockhdr_micros",
+                        "ledger_blockq_init_count",
+                        "ledger_blockq_init_micros",
+                        "ledger_blockq_sync_forget_count",
+                        "ledger_blockq_sync_forget_micros",
+                        "ledger_blockq_sync_put_count",
+                        "ledger_blockq_sync_put_micros",
+                        "ledger_commitround_count",
+                        "ledger_commitround_micros",
+                        "ledger_initblocksdb_count",
+                        "ledger_initblocksdb_micros",
+                        "ledger_verifygenhash_count",
+                        "ledger_verifygenhash_micros"
+                    ]
+                },
+                "IncomingPeers": {
+                    "type": "null"
+                },
+                "OutgoingPeers": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Address": {
+                                "type": "string"
+                            },
+                            "HostName": {
+                                "type": "string"
+                            },
+                            "InstanceName": {
+                                "type": "string"
+                            },
+                            "ConnectionDuration": {
+                                "type": "integer"
+                            },
+                            "Endpoint": {
+                                "type": "string"
+                            },
+                            "MessageDelay": {
+                                "type": "integer"
+                            },
+                            "DuplicateFilterCount": {
+                                "type": "integer"
+                            },
+                            "TXCount": {
+                                "type": "integer"
+                            },
+                            "MICount": {
+                                "type": "integer"
+                            },
+                            "AVCount": {
+                                "type": "integer"
+                            },
+                            "PPCount": {
+                                "type": "integer"
+                            },
+                            "UNKCount": {
+                                "type": "integer"
+                            },
+                            "TCP": {
+                                "type": "object",
+                                "properties": {
+                                    "RTT": {
+                                        "type": "integer"
+                                    },
+                                    "RTTVar": {
+                                        "type": "integer"
+                                    },
+                                    "RTTMin": {
+                                        "type": "integer"
+                                    },
+                                    "SndMSS": {
+                                        "type": "integer"
+                                    },
+                                    "RcvMSS": {
+                                        "type": "integer"
+                                    },
+                                    "SndCwnd": {
+                                        "type": "integer"
+                                    },
+                                    "RcvWnd": {
+                                        "type": "integer"
+                                    },
+                                    "Rate": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "RTT",
+                                    "RTTMin",
+                                    "RTTVar",
+                                    "Rate",
+                                    "RcvMSS",
+                                    "RcvWnd",
+                                    "SndCwnd",
+                                    "SndMSS"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "AVCount",
+                            "Address",
+                            "ConnectionDuration",
+                            "DuplicateFilterCount",
+                            "Endpoint",
+                            "HostName",
+                            "InstanceName",
+                            "MICount",
+                            "PPCount",
+                            "TCP",
+                            "TXCount",
+                            "UNKCount"
+                        ]
+                    }
+                },
+                "VoterAddress": {
+                    "type": "string"
+                },
+                "ProposalHash": {
+                    "type": "string"
+                },
+                "PreviousProposalHash1": {
+                    "type": "string"
+                },
+                "PreviousProposalHash2": {
+                    "type": "string"
+                }
+            }
+        },
+        "instanceName": {
+            "type": "string"
+        },
+        "session": {
+            "type": "string"
+        },
+        "v": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "event": {
+            "type": "string"
+        },
+        "local": {
+            "type": "string"
+        },
+        "messageDelay": {
+            "type": "integer"
+        },
+        "remote": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "file",
+        "function",
+        "level",
+        "line",
+        "msg",
+        "time"
+    ]
+}

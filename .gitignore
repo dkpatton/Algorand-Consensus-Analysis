@@ -1,5 +1,6 @@
 .venv/
-data/
+data/node.log
 __pycache__/
 config/
+tmp
 Algorand-Consensus-Analysis.code-workspace
