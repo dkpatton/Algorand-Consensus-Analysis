@@ -8,10 +8,10 @@ from algosdk.v2client import algod
 from bs4 import BeautifulSoup
 from config.algod import API_CONFIG
 
-algod_address = API_CONFIG["algod_address"]
-algod_token = API_CONFIG["algod_api_key"]
-headers = {"X-API-Key": algod_token}
-algod_client = algod.AlgodClient(algod_token, algod_address, headers)
+ALGOD_ADDRESS = API_CONFIG["algod_address"]
+ALGOD_TOKEN = API_CONFIG["algod_api_key"]
+headers = {"X-API-Key": ALGOD_TOKEN}
+algod_client = algod.AlgodClient(ALGOD_TOKEN, ALGOD_ADDRESS, headers)
 
 ALGO_INC_URL = "https://algorand.com/resources/blog/algorand_wallets"
 ALGO_FND_URL = "https://algorand.foundation/the-foundation"
@@ -47,7 +47,7 @@ for p in soup.find_all("p"):
             algorand_foundation_addresses.append(address)
 
 # Save to txt files
-with open("addresses/algorand_inc_addresses.txt", "w", encdoing="utf-8") as f:
+with open("addresses/algorand_inc_addresses.txt", "w", encoding="utf-8") as f:
     for address in algorand_inc_addresses:
         f.write(address + "\n")
 
@@ -60,13 +60,14 @@ algo_inc_and_found_accounts = {}
 for address in algorand_inc_addresses:
     account = algod_client.account_info(address)
     time.sleep(5)
-    algo_inc_and_found_accounts[address] = {"owner": "Algorand Inc.", "balance": str(account["amount"])}
+    algo_inc_and_found_accounts[address] = {"owner": "Algorand Inc.",
+                                            "balance": str(account["amount"])}
 
 for address in algorand_foundation_addresses:
     account = algod_client.account_info(address)
     time.sleep(5)
-    algo_inc_and_found_accounts[address] = {"owner": "Algorand Foundation", "balance": str(account["amount"])}
+    algo_inc_and_found_accounts[address] = {"owner": "Algorand Foundation",
+                                            "balance": str(account["amount"])}
 
-with open("addresses/algo_inc_and_found_accounts.json", "w") as f:
+with open("addresses/algo_inc_and_found_accounts.json", "w", encoding="utf-8") as f:
     f.write(json.dumps(algo_inc_and_found_accounts, indent=4))
-
