@@ -70,3 +70,6 @@ for account in all_accounts:
 
 with open("data/all_accounts.json", "w", encoding="utf-8") as f:
     json.dump(all_accounts, f, indent=4)
+
+with open("data/meta_data.json", "w", encoding="utf-8") as f:
+    json.dump({"firstBlock": first_block, "lastBlock": last_block}, f, indent=4)

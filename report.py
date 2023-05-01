@@ -24,6 +24,10 @@ REPORT_TERMS = {"AF": "The Algorand Foundation, the organization charged with\
 cb_algo_price_url = requests.get("https://api.coinbase.com/v2/exchange-rates?currency=ALGO",
                                  timeout=60).json()["data"]
 
+# Load metadata
+with open("data/meta_data.json", "r", encoding="utf-8") as f:
+    metadata = json.load(f)
+    
 iso_date = datetime.datetime.fromtimestamp(time.time()).isoformat()
 with open("data/all_accounts.json", "r", encoding="utf-8") as f:
     accounts = json.load(f)
@@ -68,13 +72,21 @@ plt.xlabel("Votes")
 plt.ylabel("Frequency")
 plt.savefig("images/votes_distribution.png")
 
+firstRound = metadata["first_block"]
+lastRound = metadata["last_block"]
+
+
 # Max appendix column
 df_appendix = df.set_index("Owner")
 appendix = df_appendix.to_markdown()
 markdown = "# Algorand Decentralization Report, " + iso_date + "\n\n"
+markdown += "Data in this report have been generated using a node log. " + \
+            "The block range for this report is from block " + str(firstRound) + \
+            " to block " + str(lastRound) + ". Owner is being identified through " + \
+            "the foundation and inc websites. I'll be running this periodically.\n\n"
 markdown += "## Summary Table\n"
 markdown += df_report1.to_markdown()
-markdown += "\n## Vote Distribution\n"
+markdown += "\n## Number of Votes Distribution\n"
 markdown += "![Votes Distribution](images/votes_distribution.png)\n\n"
 markdown += "\n\n"
 markdown += "## Raw Table\n"
