@@ -1,4 +1,4 @@
-# Algorand Decentralization Report, 2023-05-01T16:24:55.890899
+# Algorand Decentralization Report, 2023-05-07T16:51:42.541788
 
 Data in this report have been generated using a node log. The block range for this report is from block 28747728 to block 28751153. Owner is being identified through the foundation and inc websites. I'll be running this periodically.
 
