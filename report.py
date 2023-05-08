@@ -27,7 +27,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     header = f.readline()
     with open("archive/" + header.split("Decentralization Report, ")[1].strip().split("T")[0] + ".md", "w", encoding="utf-8") as f2:
         f2.write(header + f.read())
-quit()
+
 
 # Load metadata
 with open("data/meta_data.json", "r", encoding="utf-8") as f:
