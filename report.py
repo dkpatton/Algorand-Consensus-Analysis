@@ -60,10 +60,10 @@ df_report1["Balance"] = df_report1["Balance"] / 1000000
 df_report1 = df_report1.groupby("Owner").agg({"Balance": ["mean"],
                                                 "Votes": ["mean", "count", "std"]})
 df_report1.columns = ["Balance Mean",
-                      "Votes Mean", "Votes Count", "Votes Std"]
+                      "Votes Mean", "Node Count", "Votes Std"]
 df_report1["Balance Mean"] = df_report1["Balance Mean"].map("{:,.2f}".format)
 # Add total percentage of votes column to report
-df_report1["Votes %"] = (df_report1["Votes Count"] / df_report1["Votes Count"].sum()) * 100
+df_report1["Votes %"] = (df_report1["Node Count"] / df_report1["Node Count"].sum()) * 100
 
 # Generate histograph of votes
 df["Votes"].plot.hist(bins=100, alpha=0.5)

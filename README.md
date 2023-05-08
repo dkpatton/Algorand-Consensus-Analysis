@@ -1,12 +1,12 @@
-# Algorand Decentralization Report, 2023-05-07T19:33:58.354311
+# Algorand Decentralization Report, 2023-05-08T15:14:38.756279
 
 Data in this report have been generated using a node log. The block range for this report is from block 28908844 to block 28913016. Owner is being identified through the foundation and inc websites. I'll be running this periodically.
 
 ## Summary Table
-| Owner               | Balance Mean   |   Votes Mean |   Votes Count |   Votes Std |   Votes % |
-|:--------------------|:---------------|-------------:|--------------:|------------:|----------:|
-| Algorand Foundation | 15,653,331.43  |      5746.27 |            11 |     1647.3  |   7.91367 |
-| Community           | 6,294,532.74   |      2576.08 |           128 |     3370.14 |  92.0863  |
+| Owner               | Balance Mean   |   Votes Mean |   Node Count |   Votes Std |   Votes % |
+|:--------------------|:---------------|-------------:|-------------:|------------:|----------:|
+| Algorand Foundation | 15,653,331.43  |      5746.27 |           11 |     1647.3  |   7.91367 |
+| Community           | 6,294,532.74   |      2576.08 |          128 |     3370.14 |  92.0863  |
 ## Number of Votes Distribution
 ![Votes Distribution](images/votes_distribution.png)
 
