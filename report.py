@@ -25,7 +25,8 @@ cb_algo_price_url = requests.get("https://api.coinbase.com/v2/exchange-rates?cur
                                  timeout=60).json()["data"]
 with open("README.md", "r", encoding="utf-8") as f:
     header = f.readline()
-    with open("archive/" + header.split("Decentralization Report, ")[1].strip().split("T")[0] + ".md", "w", encoding="utf-8") as f2:
+    file_name = header.split("Decentralization Report, ")[1].strip().split("T")[0]
+    with open("archive/" + file_name + ".md", "w", encoding="utf-8") as f2:
         f2.write(header + f.read())
 
 
@@ -87,8 +88,11 @@ appendix = df_appendix.to_markdown()
 markdown = "# Algorand Decentralization Report, " + iso_date + "\n\n"
 markdown += "Data in this report have been generated using a node log. " + \
             "The block range for this report is from block " + str(firstRound) + \
-            " to block " + str(lastRound) +"(" + str(lastRound-firstRound) +" total). Owner is being identified through " + \
+            " to block " + str(lastRound) +" (" + str(lastRound-firstRound) +" total)." +\
+            " Owner is being identified through " + \
             "the foundation and inc websites. I'll be running this periodically.\n\n"
+markdown += "Previous report: [{link_name}]({link_to_archive})\n\n".format(
+    link_to_archive="archive/" + header + ".md", link_name=header)
 markdown += "## Summary Table\n"
 markdown += df_report1.to_markdown()
 markdown += "\n## Number of Votes Distribution\n"
