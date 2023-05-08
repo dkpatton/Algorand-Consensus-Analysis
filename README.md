@@ -1,10 +1,8 @@
-# Algorand Decentralization Report, 2023-05-08T15:58:19.567400
+# Algorand Decentralization Report, 2023-05-08T16:04:34.740232
 
 Data in this report have been generated using a node log. The block range for this report is from block 28921996 to block 28932298 (10302 total). Owner is being identified through the foundation and inc websites. I'll be running this periodically.
 
-Previous report: [# Algorand Decentralization Report, 2023-05-08T15:45:49.058733
-](archive/# Algorand Decentralization Report, 2023-05-08T15:45:49.058733
-.md)
+Previous report: [2023-05-08](https://github.com/dkpatton/Algorand-Consensus-Analysis/blob/main/archive/2023-05-08.md)
 
 ## Summary Table
 | Owner               | Balance Mean   |   Votes Mean |   Node Count |   Votes Std |   Votes % |

@@ -92,7 +92,7 @@ markdown += "Data in this report have been generated using a node log. " + \
             " Owner is being identified through " + \
             "the foundation and inc websites. I'll be running this periodically.\n\n"
 markdown += "Previous report: [{link_name}]({link_to_archive})\n\n".format(
-    link_to_archive="archive/" + header + ".md", link_name=header)
+     link_name=file_name, link_to_archive="https://github.com/dkpatton/Algorand-Consensus-Analysis/blob/main/archive/" + file_name + ".md")
 markdown += "## Summary Table\n"
 markdown += df_report1.to_markdown()
 markdown += "\n## Number of Votes Distribution\n"
