@@ -73,8 +73,8 @@ plt.ylabel("Frequency")
 no_legend = plt.savefig("images/votes_distribution.png")
 
 # For info block in report
-firstRound = metadata["first_block"]
-lastRound = metadata["last_block"]
+firstRound = metadata["firstBlock"]
+lastRound = metadata["lastBlock"]
 
 # Max appendix column
 df_appendix = df.set_index("Owner")
