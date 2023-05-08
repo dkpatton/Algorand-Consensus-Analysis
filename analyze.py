@@ -25,7 +25,9 @@ all_accounts = accounts
 
 # Copy node log to folder for analysis
 if not(os.path.exists("data/node.log")):
-    os.system("cp /var/lib/algorand/node.log node.log")
+    os.system("cp /var/lib/algorand/node.log data/node.log")
+else:
+    os.system("cp /var/lib/algorand/node.log data/node.log")
 
 with open("data/node.log", "r", encoding="utf-8") as f:
     for line in f:
