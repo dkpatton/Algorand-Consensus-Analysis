@@ -4,3 +4,4 @@ __pycache__/
 config/
 tmp
 Algorand-Consensus-Analysis.code-workspace
+known_addresses/unknown.txt
